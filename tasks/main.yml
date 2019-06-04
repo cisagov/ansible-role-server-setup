@@ -1,2 +1,29 @@
 ---
-# tasks file for skeleton
+# tasks file for server_setup
+
+# ServerSetup uses git but doesn't install it
+- name: Install git
+  package:
+    name: git
+
+- name: Create the /opt/ServerSetup directory
+  file:
+    path: /opt/ServerSetup
+    state: directory
+    mode: 0755
+
+# - name: Download and untar the ServerSetup tarball
+#   unarchive:
+#     src: https://api.github.com/repos/noahpowers/ServerSetup/tarball/master
+#     dest: /opt/ServerSetup
+#     remote_src: yes
+#     owner: root
+#     group: root
+#     extra_opts:
+#       - "--strip-components=1"
+
+- name: Copy the ServerSetup script
+  copy:
+    src: ServerSetup.sh
+    dest: /opt/ServerSetup/ServerSetup.sh
+    mode: 0755

@@ -38,6 +38,9 @@ repos:
     rev: 1.0.5
     hooks:
       - id: shell-lint
+        # This file was passed down to us, and it fails the linter.
+        # Let's skip it.
+        exclude: files/ServerSetup.sh
   - repo: https://gitlab.com/pycqa/flake8
     rev: 3.7.7
     hooks:

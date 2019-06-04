@@ -1,7 +1,7 @@
 ---
 galaxy_info:
-  author: First Last
-  description: Skeleton Ansible role
+  author: Shane Frasier
+  description: Install server setup script.
   company: CISA NCATS
   license: CC0
   min_ansible_version: 2.0
@@ -9,10 +9,6 @@ galaxy_info:
     - name: Debian
       versions:
         - stretch
-    - name: Amazon
-      versions:
-        - 2018.03
-  galaxy_tags:
-    - skeleton
+  galaxy_tags: []
 
 dependencies: []
