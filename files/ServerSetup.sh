@@ -10,6 +10,10 @@ fi
 function debian_initialize() {
     echo "Updating and Installing Dependicies"
     echo "deb http://ftp.debian.org/debian stretch-backports main" >> /etc/apt/sources.list
+    # If grub tries to update, then it brings up a curses UI and wants
+    # user input.  We can't deal with that here, and we don't actually
+    # need or want to update grub anyway, so just hold that package.
+    apt-mark hold grub-pc
     apt-get -qq update > /dev/null 2>&1
     echo "...keep waiting..."
     apt-get -qq -y upgrade > /dev/null 2>&1
