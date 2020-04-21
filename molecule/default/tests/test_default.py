@@ -18,7 +18,7 @@ def test_packages(host, pkg):
     assert host.package(pkg).is_installed
 
 
-@pytest.mark.parametrize("f", ["/opt/ServerSetup", "/opt/ServerSetup/ServerSetup.sh"])
+@pytest.mark.parametrize("f", ["/opt/ServerSetup", "/opt/ServerSetup/serversetup.sh"])
 def test_files(host, f):
     """Test that the expected files and directories are present."""
     assert host.file(f).exists
