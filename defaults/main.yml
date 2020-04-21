@@ -1,0 +1,7 @@
+---
+# defaults file for ansible-role-server-setup
+
+# If true, then the ServerSetup script in files is installed.
+# Otherwise the latest ServerSetup code from
+# https://github.com/noahpowers/ServerSetup is used.
+use_pca_script: false
