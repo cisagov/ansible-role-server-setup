@@ -22,7 +22,7 @@
 
 - name: Copy the PCA-specific ServerSetup script
   copy:
-    src: ServerSetup.sh
+    src: pca_serversetup.sh
     dest: /opt/ServerSetup/serversetup.sh
     mode: 0755
   when: use_pca_script
