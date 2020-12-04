@@ -20,10 +20,6 @@ galaxy_info:
         # Debian Testing:
         # https://www.kali.org/docs/policy/kali-linux-relationship-with-debian
         - bullseye
-    - name: Fedora
-      versions:
-        - 32
-        - 33
     - name: Ubuntu
       versions:
         - xenial
