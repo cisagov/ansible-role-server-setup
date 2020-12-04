@@ -25,10 +25,6 @@ platforms:
     image: debian:bullseye-slim
   - name: kali
     image: kalilinux/kali-rolling
-  - name: fedora32
-    image: fedora:32
-  - name: fedora33
-    image: fedora:33
   - name: ubuntu16
     image: ubuntu:xenial
   - name: ubuntu18
