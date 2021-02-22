@@ -55,6 +55,9 @@ repos:
         args:
           - --indent-size
           - '2'
+        # This file was passed down to us, and it fails the linter.
+        # Let's skip it.
+        exclude: files/pca_serversetup.sh
   - repo: https://github.com/detailyang/pre-commit-shell
     rev: 1.0.5
     hooks:
