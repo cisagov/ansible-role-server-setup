@@ -22,7 +22,6 @@ galaxy_info:
         - bullseye
     - name: Ubuntu
       versions:
-        - xenial
         - bionic
         - focal
   role_name: server_setup
