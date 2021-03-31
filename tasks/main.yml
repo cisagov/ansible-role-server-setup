@@ -23,6 +23,5 @@
 - name: Copy the PCA-specific ServerSetup script
   ansible.builtin.copy:
     src: pca_serversetup.sh
-    dest: /opt/ServerSetup/serversetup.sh
+    dest: /opt/ServerSetup/classic_pca_serversetup.sh
     mode: 0755
-  when: use_pca_script
