@@ -1,5 +1,7 @@
 ---
 - name: Converge
   hosts: all
-  roles:
-    - role: ansible-role-server-setup
+  tasks:
+    - name: Include ansible-role-server-setup
+      ansible.builtin.include_role:
+        name: ansible-role-server-setup
