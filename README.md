@@ -1,8 +1,7 @@
 # ansible-role-server-setup #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-server-setup/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-server-setup/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-server-setup.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-server-setup/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-server-setup.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-server-setup/context:python)
+[![CodeQL](https://github.com/cisagov/ansible-role-server-setup/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-server-setup/actions/workflows/codeql-analysis.yml)
 
 An Ansible role for installing the server setup script that has been
 passed down by the RVA folks.
@@ -34,8 +33,10 @@ Here's how to use it in a playbook:
 - hosts: all
   become: yes
   become_method: sudo
-  roles:
-    - server_setup
+  tasks:
+    - name: Install server setup script
+      ansible.builtin.include_role:
+        name: server_setup
 ```
 
 ## Contributing ##
