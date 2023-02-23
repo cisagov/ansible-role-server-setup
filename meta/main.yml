@@ -1,8 +1,9 @@
 ---
+dependencies: []
 galaxy_info:
   author: Shane Frasier
-  description: Install server setup script.
   company: CISA Cyber Assessments
+  description: Install server setup script.
   galaxy_tags: []
   license: CC0
   # With the release of version 2.10, Ansible finally correctly
@@ -24,7 +25,6 @@ galaxy_info:
         - bookworm
     - name: Fedora
       versions:
-        - "35"
         - "36"
         - "37"
     - name: Ubuntu
@@ -33,5 +33,3 @@ galaxy_info:
         - focal
         - jammy
   role_name: server_setup
-
-dependencies: []
