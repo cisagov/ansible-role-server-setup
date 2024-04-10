@@ -1,27 +1,26 @@
 ---
-# tasks file for server_setup
-
-# ServerSetup uses git but doesn't install it
+# ServerSetup uses git but doesn't install it.
 - name: Install git
   ansible.builtin.package:
-    name: git
+    name:
+      - git
 
 - name: Create the /opt/ServerSetup directory
   ansible.builtin.file:
+    mode: 0755
     path: /opt/ServerSetup
     state: directory
-    mode: 0755
 
 - name: Download and untar the ServerSetup tarball
   ansible.builtin.unarchive:
-    src: https://api.github.com/repos/noahpowers/ServerSetup/tarball/master
     dest: /opt/ServerSetup
-    remote_src: yes
     extra_opts:
       - "--strip-components=1"
+    remote_src: yes
+    src: https://api.github.com/repos/noahpowers/ServerSetup/tarball/master
 
 - name: Copy the PCA-specific ServerSetup script
   ansible.builtin.copy:
-    src: pca_serversetup.sh
     dest: /opt/ServerSetup/classic_pca_serversetup.sh
     mode: 0755
+    src: pca_serversetup.sh
