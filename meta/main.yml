@@ -19,15 +19,20 @@ galaxy_info:
   min_ansible_version: "2.10"
   namespace: cisagov
   platforms:
+    # AL 2023 is not supported by ServerSetup.
+    # - name: Amazon Linux
+    #   versions:
+    #     - "2023"
     - name: Debian
       versions:
         - buster
         - bullseye
         - bookworm
+        - trixie
     - name: Fedora
       versions:
-        - "37"
         - "38"
+        - "39"
     - name: Kali
       versions:
         - "2023"
