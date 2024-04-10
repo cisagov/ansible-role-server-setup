@@ -16,7 +16,7 @@
     dest: /opt/ServerSetup
     extra_opts:
       - "--strip-components=1"
-    remote_src: yes
+    remote_src: true
     src: https://api.github.com/repos/noahpowers/ServerSetup/tarball/master
 
 - name: Copy the PCA-specific ServerSetup script
