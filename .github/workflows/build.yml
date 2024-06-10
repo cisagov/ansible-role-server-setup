@@ -181,7 +181,8 @@ jobs:
           - amd64
           - arm64
         platform:
-          - amazonlinux2023-systemd
+          # Amazon Linux 2023 is not supported by ServerSetup.
+          # - amazonlinux2023-systemd
           - debian10-systemd
           - debian11-systemd
           - debian12-systemd
