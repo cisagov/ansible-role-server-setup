@@ -7,7 +7,7 @@
 
 - name: Create the /opt/ServerSetup directory
   ansible.builtin.file:
-    mode: 0755
+    mode: u=rwx,g=rx,o=rx
     path: /opt/ServerSetup
     state: directory
 
@@ -22,5 +22,5 @@
 - name: Copy the PCA-specific ServerSetup script
   ansible.builtin.copy:
     dest: /opt/ServerSetup/classic_pca_serversetup.sh
-    mode: 0755
+    mode: u=rwx,g=rx,o=rx
     src: pca_serversetup.sh
