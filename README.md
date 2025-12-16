@@ -1,6 +1,7 @@
 # ansible-role-server-setup #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-server-setup/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-server-setup/actions)
+[![License](https://img.shields.io/github/license/cisagov/ansible-role-server-setup)](https://spdx.org/licenses/)
 [![CodeQL](https://github.com/cisagov/ansible-role-server-setup/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-server-setup/actions/workflows/codeql-analysis.yml)
 
 An Ansible role for installing the server setup script that has been
